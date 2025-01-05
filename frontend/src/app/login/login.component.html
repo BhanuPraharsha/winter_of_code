@@ -1,0 +1,22 @@
+<h1>Login:</h1>
+<div class="logincontainer">
+<div class="row">
+    <div class="col-6">
+     User Name :
+    </div>
+    <div class="col-6">
+      <input type="text" [(ngModel)]="username" #name="ngModel">
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-6">
+      Pass word :
+     </div>
+    <div class="col-6">
+      <input type="password" [(ngModel)]="password" #pass="ngModel">
+    </div>
+  </div>
+  <button (click)="loginUser()">login</button>
+</div>
+{{this.msg}}

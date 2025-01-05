@@ -1,0 +1,77 @@
+<!-- <button (click)="openpopup()">openpopups</button> -->
+<p-table [value]="packets" [paginator]="true" [rows]="20" [sortable]="true" 
+ showGridlines="true" 
+  styleClass="p-datatable-gridlines"
+    
+    selectionMode="single" 
+    [(selection)]="selectedPacket" 
+    dataKey="id" 
+    (onRowSelect)="onRowSelect($event)" 
+    >
+<ng-template pTemplate="header">
+    <tr>
+        <th pSortableColumn="id">ID <p-sortIcon field="id"></p-sortIcon></th>
+        <th pSortableColumn="src_ip">Source IP <p-sortIcon field="src_ip"></p-sortIcon></th>
+        <th pSortableColumn="dest_ip">Destination IP <p-sortIcon field="dest_ip"></p-sortIcon></th>
+        <th pSortableColumn="protocol">Protocol <p-sortIcon field="protocol"></p-sortIcon></th>
+        <th pSortableColumn="tcp_src_port">TCP Source Port <p-sortIcon field="tcp_src_port"></p-sortIcon></th>
+        <th pSortableColumn="tcp_dest_port">TCP Destination Port <p-sortIcon field="tcp_dest_port"></p-sortIcon></th>
+        <th pSortableColumn="udp_src_port">UDP Source Port <p-sortIcon field="udp_src_port"></p-sortIcon></th>
+        <th pSortableColumn="udp_dest_port">UDP Destination Port <p-sortIcon field="udp_dest_port"></p-sortIcon></th>
+        <th pSortableColumn="sequence_number">Sequence Number <p-sortIcon field="sequence_number"></p-sortIcon></th>
+        <th pSortableColumn="ack_number">ACK Number <p-sortIcon field="ack_number"></p-sortIcon></th>
+        <th pSortableColumn="icmp_type">ICMP Type <p-sortIcon field="icmp_type"></p-sortIcon></th>
+        <th pSortableColumn="icmp_code">ICMP Code <p-sortIcon field="icmp_code"></p-sortIcon></th>
+        <th pSortableColumn="payload">Payload <p-sortIcon field="payload"></p-sortIcon></th>
+        <th pSortableColumn="count">Count <p-sortIcon field="count"></p-sortIcon></th>
+
+
+    </tr>
+</ng-template>
+<ng-template pTemplate="body" let-packet>
+    <tr [pSelectableRow]="packet">
+        <td>{{ packet.id }}</td>
+        <td>{{ packet.src_ip }}</td>
+        <td>{{ packet.dest_ip }}</td>
+        <td>{{ packet.protocol }}</td>
+        <td>{{ packet.tcp_src_port }}</td>
+        <td>{{ packet.tcp_dest_port }}</td>
+        <td>{{ packet.udp_src_port }}</td>
+        <td>{{ packet.udp_dest_port }}</td>
+        <td>{{ packet.sequence_number }}</td>
+        <td>{{ packet.ack_number }}</td>
+        <td>{{ packet.icmp_type }}</td>
+        <td>{{ packet.icmp_code }}</td>
+        <td>{{ packet.payload }}</td>
+        <td>{{ packet.count }}</td>
+    </tr>
+</ng-template>
+</p-table>
+
+<!-- <table>
+    <tr>
+      <th>id</th>
+      <th>src_ip</th>     
+    </tr>
+    <tr *ngFor="let pac of packets">       
+          <td>{{ pac.id }}</td>
+          <td>{{ pac.src_ip }}</td>         
+    </tr>
+  </table> -->
+
+<!-- <p-dialog [(visible)]="showDialog" header="Row Details" [model]="true" [closable]="true">
+    ghhghhj
+    <div *ngIf="selectedPacket">
+        <p><strong>Name:</strong> {{ selectedPacket.id }}</p>
+        <p><strong>Age:</strong> {{ selectedPacket.id }}</p>
+    </div> 
+</p-dialog> -->
+<p-dialog [(visible)]="showDialog" header="Row Details" [closable]="true">
+    sffhfgh fthfg
+    <!-- <div *ngIf="selectedPacket">
+      <p><strong>ID:</strong> {{ selectedPacket.id }}</p>
+      <p><strong>Source IP:</strong> {{ selectedPacket.src_ip }}</p>
+      <p><strong>Destination IP:</strong> {{ selectedPacket.dest_ip }}</p>
+      <p><strong>Payload:</strong> {{ selectedPacket.payload }}</p>
+    </div> -->
+  </p-dialog>

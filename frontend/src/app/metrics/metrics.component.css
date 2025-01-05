@@ -1,0 +1,31 @@
+/* Ensure full-screen grid layout */
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Equal-sized columns */
+    gap: 20px; /* Space between items */
+    height: calc(100vh - 60px); /* Full-screen height minus button space */
+    margin-top: 20px; /* Space between button and grid */
+    padding: 10px; /* Padding around the grid */
+    box-sizing: border-box; /* Ensures padding doesn't affect grid size */
+  }
+  
+  /* Each chart box */
+  .chart-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc; /* Optional: Add a border for clarity */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Card shadow effect */
+    border-radius: 8px; /* Rounded corners */
+    height: 100%; /* Full height of the grid cell */
+  }
+  
+  /* Specific styling for the Total Payload box */
+  .total-traffic {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+  }
+  

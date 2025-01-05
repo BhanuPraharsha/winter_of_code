@@ -1,0 +1,87 @@
+
+<!-- <button (click)="fetchMetrics()">Fetch Metrics</button> -->
+<button 
+(click)="fetchMetrics()" 
+style="
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: #28a745;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+"
+onmouseover="this.style.backgroundColor='#218838'; this.style.transform='translateY(-2px)';"
+onmouseout="this.style.backgroundColor='#28a745'; this.style.transform='translateY(0)';"
+onmousedown="this.style.backgroundColor='#1e7e34'; this.style.transform='translateY(0)';"
+onmouseup="this.style.backgroundColor='#218838';"
+>
+Fetch Metrics
+</button>
+
+
+<div class="charts-container">
+  <div class="chart-section">
+    <h3 class="chart-header">Traffic by Protocol</h3>
+  <p-chart 
+    *ngIf="trafficByProtocol.datasets.length" 
+    type="bar" 
+    [data]="trafficByProtocol" 
+    styleClass="chart-box">
+  </p-chart>
+</div>
+<div class="chart-section">
+  <h3 class="chart-header">top Source Ips</h3>
+  <p-chart 
+    *ngIf="topSourceIps.datasets.length" 
+    type="bar" 
+    [data]="topSourceIps" 
+    styleClass="chart-box">
+  </p-chart>
+</div>
+<div class="chart-section">
+  <h3 class="chart-header">top Destination Ips</h3>
+  <p-chart 
+    *ngIf="topDestinationIps.datasets.length" 
+    type="bar" 
+    [data]="topDestinationIps" 
+    styleClass="chart-box">
+  </p-chart>
+</div>
+  <div class="chart-section">
+    <h3 class="chart-header">packet Count By Time</h3>
+  <p-chart 
+    *ngIf="packetCountByTime.datasets.length" 
+    type="line" 
+    [data]="packetCountByTime" 
+    styleClass="chart-box">
+  </p-chart>
+</div>
+  <div class="chart-section">
+    <h3 class="chart-header">port Usage Tcp</h3>
+  <p-chart 
+    *ngIf="portUsageTcp.datasets.length" 
+    type="bar" 
+    [data]="portUsageTcp" 
+    styleClass="chart-box">
+  </p-chart>
+</div>
+  <div class="chart-section">
+    <h3 class="chart-header">port Usage Udp</h3>
+  <p-chart 
+    *ngIf="portUsageUdp.datasets.length" 
+    type="bar" 
+    [data]="portUsageUdp" 
+    styleClass="chart-box">
+  </p-chart>
+</div>
+
+  <div *ngIf="totalTrafficVolume" class="chart-box total-traffic">
+    <p>Total Payload Size: {{ totalTrafficVolume }} bytes</p>
+  </div>
+</div>

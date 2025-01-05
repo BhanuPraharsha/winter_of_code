@@ -1,0 +1,68 @@
+.keyloggDiv
+{
+    height:60vh;
+    overflow: auto;
+}
+
+/* Container styling */
+.session-logs-container {
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Table styling */
+  .log-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .log-table thead {
+    background-color: #dcdee1;
+    color: black;
+    text-align: left;
+  }
+  
+  .log-table th, 
+  .log-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .log-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .log-table tbody tr:hover {
+    background-color: #e9ecef;
+  }
+  
+  /* Captured text styling */
+  .captured-text {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap; /* Preserve formatting and line breaks */
+    word-break: break-word;
+  }
+  
+  /* Error message */
+  .error-message {
+    text-align: center;
+    color: red;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  

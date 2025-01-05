@@ -1,0 +1,37 @@
+<p>keylogger works!</p>
+<button (click)="fetchLogs()">Refresh</button>
+<!-- <div class="keyloggDiv" *ngIf="logs">
+    <h2>Session Logs</h2>
+    <pre>{{ logs }}</pre>
+</div> -->
+
+<div class="session-logs-container">
+    <h2>Session Logs</h2>
+    <div class="keyloggDiv">
+    <div *ngIf="logs">
+      <table class="log-table">
+        <thead>
+          <tr>
+            <th>Session Start</th>
+            <th>Domain</th>
+            <th>Session End</th>
+            <th>Captured Text</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let log of formattedLogs">
+            <td>{{ log.start }}</td>
+            <td>{{ log.domain }}</td>
+            <td>{{ log.end }}</td>
+            <td>
+              <pre class="captured-text">{{ log.text }}</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+    
+  </div>
+  
+  

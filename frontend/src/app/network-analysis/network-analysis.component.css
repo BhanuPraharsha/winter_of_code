@@ -1,0 +1,20 @@
+::ng-deep .p-table th {
+    background-color: #007ad9;
+    color: white;
+    font-weight: bold;
+  }
+  
+  ::ng-deep .p-table td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .p-paginator {
+    background-color: #f1f1f1;
+  }
+
+  .p-datatable>.p-datatable-wrapper {
+    overflow: auto;
+    height: 80vh;
+}
+  

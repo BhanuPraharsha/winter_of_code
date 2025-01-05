@@ -1,0 +1,25 @@
+<!-- Application
+<div>
+  <h2>WebSocket Chat</h2>
+  <div *ngFor="let msg of messages">
+    {{ msg }}
+  </div>
+  <input [(ngModel)]="message" placeholder="Enter message" />
+  <button (click)="sendMessage()">Send</button>
+</div> -->
+
+<!-- <nav *ngIf="router.routerState.snapshot.url!='/login'">
+  <a  class="pad-left" *ngIf="router.routerState.snapshot.url!='/network'" routerLink="/network">Network-Traffic</a>
+  <a  class="pad-left"  *ngIf="router.routerState.snapshot.url!='/metrics'" routerLink="/metrics">Metrics</a>
+  <a  class="pad-left"  *ngIf="router.routerState.snapshot.url!='/keylogger'" routerLink="/keylogger">Keylogger</a>
+</nav> -->
+<nav *ngIf="router.routerState.snapshot.url!='/login'" class="button-nav">
+  <a class="button" *ngIf="router.routerState.snapshot.url!='/network'" routerLink="/network">Network-Traffic</a>
+  <a class="button" *ngIf="router.routerState.snapshot.url!='/metrics'" routerLink="/metrics">Metrics</a>
+  <a class="button" *ngIf="router.routerState.snapshot.url!='/keylogger'" routerLink="/keylogger">Keylogger</a>
+</nav>
+
+
+<router-outlet>
+
+</router-outlet>

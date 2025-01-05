@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+thead.p-datatable-thead 
+{
+    background-color: rgb(243, 235, 235);
+}
+td{
+    border: 1px solid rgb(223, 218, 218);
+}
+.p-datatable .p-datatable-tbody > tr > td, 
+.p-datatable .p-datatable-thead > tr > th {
+  border: 1px solid rgb(223, 218, 218);
+}
+
+.button-nav {
+  display: flex;
+  gap: 15px; /* Spacing between buttons */
+  justify-content: center; /* Centers the buttons horizontally */
+  margin: 20px 0; /* Adds spacing above and below the navigation bar */
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding for button size */
+  font-size: 16px; /* Font size for readability */
+  text-align: center;
+  text-decoration: none; /* Remove underline from links */
+  color: white; /* Text color */
+  background-color: #007bff; /* Button background color */
+  border: none; /* Removes borders */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
